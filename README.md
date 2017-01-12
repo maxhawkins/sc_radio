@@ -3,6 +3,7 @@ An example internet radio server using SuperCollider.
 You could use this as a starting point for a procedural radio station.
 
 * Supercollider for audio generation
+* JACK with 'dummy' driver to work on cloud hardware
 * Darkice to connect with icecast
 * Icecast for mp3 streaming
 
