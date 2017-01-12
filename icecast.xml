@@ -1,0 +1,51 @@
+<icecast>
+    <location>The Astral Plane</location>
+    <admin>admin@example.com</admin>
+
+    <limits>
+        <clients>500</clients>
+        <sources>2</sources>
+        <threadpool>5</threadpool>
+        <queue-size>524288</queue-size>
+        <client-timeout>30</client-timeout>
+        <header-timeout>15</header-timeout>
+        <source-timeout>10</source-timeout>
+        <burst-on-connect>1</burst-on-connect>
+        <burst-size>65535</burst-size>
+    </limits>
+
+    <authentication>
+        <source-password>password</source-password>
+        <relay-password>password</relay-password>
+
+        <admin-user>admin</admin-user>
+        <admin-password>password</admin-password>
+    </authentication>
+
+    <hostname>localhost</hostname>
+
+    <listen-socket>
+        <port>8000</port>
+    </listen-socket>
+
+    <fileserve>0</fileserve>
+    <server-id>scradio</server-id>
+
+    <paths>
+        <basedir>/usr/share/icecast2</basedir>
+    </paths>
+
+    <logging>
+        <accesslog>-</accesslog>
+        <errorlog>-</errorlog>
+      	<loglevel>3</loglevel>
+    </logging>
+
+    <security>
+        <chroot>0</chroot>
+        <changeowner>
+            <user>icecast2</user>
+            <group>icecast</group>
+        </changeowner>
+    </security>
+</icecast>

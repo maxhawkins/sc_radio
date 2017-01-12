@@ -1,0 +1,22 @@
+pcm.rawjack {
+    type jack
+    playback_ports {
+        0 darkice:left
+        1 darkice:right
+    }
+}
+pcm.jack {
+    type plug
+    slave { pcm "rawjack" }
+    hint {
+        description "JACK Audio Connection Kit"
+    }
+}
+pcm.!default 
+{ 
+         type plug 
+         slave 
+         { 
+                 pcm "rawjack" 
+         } 
+}
