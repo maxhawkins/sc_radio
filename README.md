@@ -12,8 +12,8 @@ It runs headless in Docker so your composition can be running on a server in the
 To use, install Docker then:
 
     docker build -t scradio .
-    docker run -p 5000:5000 scradio
+    docker run -p 8000:8000 scradio
 
-Then the stream will be accessible at http://localhost:5000/stream.mp3
+Then the stream will be accessible at http://localhost:8000/stream.mp3
 
 I've only tested this on Linux.
