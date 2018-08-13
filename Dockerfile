@@ -1,4 +1,4 @@
-FROM ubuntu:15.04
+FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -28,5 +28,7 @@ COPY radio.sc /radio.sc
 COPY Procfile Procfile
 
 EXPOSE 8000
+RUN mv /etc/security/limits.d/audio.conf.disabled /etc/security/limits.d/audio.conf && \
+	usermod -a -G audio root
 
 CMD ["forego", "start"]
